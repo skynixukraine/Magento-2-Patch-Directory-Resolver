@@ -1,0 +1,25 @@
+{
+    "name": "skynix/m2-directory-resolver",
+    "description": "Patch for core Magento2",
+    "authors": [
+        {
+            "name": "Skynix",
+            "email": "apps@skynix.co"
+        }
+    ],
+    "require": {
+        "vaimo/composer-patches": "^3.24.1"
+    },
+    "extra": {
+        "patches": {
+            "magento/framework": {
+                "Images can't be uploaded using WYSIWYG if media directory is a symlink": {
+                    "source" : "patches/Magento_Framework/m2-directory-resolver.patch",
+                    "version" : [
+                        "101.0.4"
+                    ]
+                }
+            }
+        }
+    }
+}
